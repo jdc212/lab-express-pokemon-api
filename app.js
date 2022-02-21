@@ -10,3 +10,7 @@ const app = express();
 // -- Define your route listeners here! --
 
 app.listen(PORT, () => console.log(`Server up and running at port ${PORT}`));
+
+const pokemonRouter = require("./routes/pokemon");
+app.use("/pokemon", pokemonRouter);
+
